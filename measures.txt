@@ -1,0 +1,106 @@
+----------------------------------------------------- MEASURES -------------------------------------------------
+
+Total Users = 
+    DISTINCTCOUNT(marketing_AB[user id])
+
+Conversion Rate = 
+    DIVIDE(
+        COUNTROWS(FILTER('marketing_AB', 'marketing_AB'[converted] = TRUE())), 
+        [Total Users], 
+        0
+    ) 
+
+Ad Conversion Rate = 
+    DIVIDE(
+        COUNTROWS(
+            FILTER(
+                'marketing_AB', 
+                'marketing_AB'[converted] = TRUE() && 'marketing_AB'[test group] = "Ad"
+            )
+        ), 
+        COUNTROWS(
+            FILTER(
+                'marketing_AB', 
+                'marketing_AB'[test group] = "Ad"
+            )
+        ), 
+        0
+    )
+
+PSA Conversion Rate = 
+    DIVIDE(
+        COUNTROWS(
+            FILTER(
+                'marketing_AB', 
+                'marketing_AB'[converted] = TRUE() && 'marketing_AB'[test group] = "PSA"
+            )
+        ), 
+        COUNTROWS(
+            FILTER(
+                'marketing_AB', 
+                'marketing_AB'[test group] = "PSA"
+            )
+        ), 
+        0
+    )
+
+Conversion Rate per Bin = 
+    DIVIDE([Converted Users], [Total Users per Bin], 0)
+
+Absolute Lift = [Ad Conversion Rate] - [PSA Conversion Rate]
+
+Relative Lift = 
+    DIVIDE(
+        ([Ad Conversion Rate] - [PSA Conversion Rate]), 
+        [PSA Conversion Rate], 
+        0
+    ) 
+
+Q1 TotalAds = 
+    PERCENTILEX.INC(ALL('marketing_AB'), 'marketing_AB'[total ads], 0.25)
+
+Q3 TotalAds = 
+    PERCENTILEX.INC(ALL('marketing_AB'), 'marketing_AB'[total ads], 0.75)
+
+IQR TotalAds = [Q3 TotalAds] - [Q1 TotalAds]
+
+Upper Whisker TotalAds = [Q3 TotalAds] + (1.5 * [IQR TotalAds])
+
+Lower Whisker TotalAds = [Q1 TotalAds] - (1.5 * [IQR TotalAds])
+
+---------------------------------------------------COLUMNS -----------------------------------------------------
+
+Time Category = 
+    SWITCH(
+        TRUE(),
+        'marketing_AB'[Most Ads Hour] >= 0 && 'marketing_AB'[Most Ads Hour] < 6, "Late Night",
+        'marketing_AB'[Most Ads Hour] >= 6 && 'marketing_AB'[Most Ads Hour] < 9, "Early Morning",
+        'marketing_AB'[Most Ads Hour] >= 9 && 'marketing_AB'[Most Ads Hour] < 12, "Morning",
+        'marketing_AB'[Most Ads Hour] >= 12 && 'marketing_AB'[Most Ads Hour] < 15, "Afternoon",
+        'marketing_AB'[Most Ads Hour] >= 15 && 'marketing_AB'[Most Ads Hour] < 18, "Late Afternoon",
+        'marketing_AB'[Most Ads Hour] >= 18 && 'marketing_AB'[Most Ads Hour] < 21, "Evening",
+        "Night"
+    )
+
+Ad Bin = 
+    SWITCH(
+        TRUE(), 
+        'marketing_AB'[total ads] <= 9, "0-9",
+        'marketing_AB'[total ads] <= 19, "10-19",
+        'marketing_AB'[total ads] <= 29, "20-29",
+        'marketing_AB'[total ads] <= 39, "30-39",
+        'marketing_AB'[total ads] <= 49, "40-49",
+        'marketing_AB'[total ads] <= 59, "50-59",
+        "60+"
+    )
+
+Outlier = 
+VAR Lower_Bound = [Lower Whisker TotalAds]
+VAR Upper_Bound = [Upper Whisker TotalAds]
+RETURN 
+    IF(
+        'marketing_AB'[total ads] < Lower_Bound || 'marketing_AB'[total ads] > Upper_Bound, 
+        "Outlier", 
+        "Normal"
+    )
+
