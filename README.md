@@ -51,11 +51,9 @@ PSA_Conversion_Rate = CALCULATE([Conversion_Rate], Data[Test Group] = "PSA")
 | File Name | Description |
 |-----------|-------------|
 | `marketing_AB.csv` | Raw dataset containing A/B test data |
-| `AB Testing.ipynb` | Jupyter Notebook with full statistical analysis |
-| `marketing.pdf` | Power BI report with insights and visualizations |
+| `AB Testing.ipynb` | Jupyter Notebook with statistical analysis & calculations|
 | `dashboard.pbix` | Power BI project file for deeper analysis |
 | `measures.txt` | List of DAX measures used in Power BI |
-| `dataset_used.csv` | The dataset used for analysis |
 | `description.txt` | A brief description of the project and dataset |
 | `output.csv` | Processed A/B test results from the Jupyter Notebook |
 
