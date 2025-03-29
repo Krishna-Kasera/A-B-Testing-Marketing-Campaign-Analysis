@@ -50,7 +50,7 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 | `output.csv` | Processed A/B test results from the Jupyter Notebook |
 
 ## 🌐 Link to Deployed Dashboard
-[View the interactive Power BI Dashboard](#) *(https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)*
+[View the interactive Power BI Dashboard](#) (https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
 
 ## 🚀 Conclusion & Recommendations
 - **Ads drive significantly higher conversions** than PSAs.
