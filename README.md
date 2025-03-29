@@ -36,15 +36,7 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 - **Total Impressions & Conversion Rates by Day/Hour**
 - **User Reach & Engagement Patterns**
 - **Conversion Rate Trends with Confidence Intervals**
-
-### **DAX Measures Used in Power BI:**
-```DAX
-Total_Conversions = SUM(Data[Converted])
-Conversion_Rate = DIVIDE([Total_Conversions], COUNT(Data[User ID]))
-Impressions_Per_User = AVERAGE(Data[Total Ads])
-Ad_Conversion_Rate = CALCULATE([Conversion_Rate], Data[Test Group] = "Ad")
-PSA_Conversion_Rate = CALCULATE([Conversion_Rate], Data[Test Group] = "PSA")
-```
+- **Comprehensive Analysis of Campaign and A/B Test**
 
 ---
 ## 📂 Files Included
