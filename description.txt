@@ -1,0 +1,6 @@
+User ID: Unique identifier for each user  
+Test group: Group to which the user was exposed (Ad or PSA)  
+Converted: Indicates whether the user converted (Yes/No)  
+Most ads day: Day of the week when the user was shown the most ads  
+Most ads hour: Hour of the day during which the user was shown the most ads  
+Total ads: Total number of ad impressions the user was exposed to  
