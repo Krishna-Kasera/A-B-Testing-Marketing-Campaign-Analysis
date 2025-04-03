@@ -1,50 +1,66 @@
-# A/B Testing: Marketing Campaign Analysis
-
 ## 📌 Project Overview
-This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Service Announcements (PSAs)** in driving conversions. The goal is to determine which approach yields higher engagement and conversion rates using **A/B testing** and statistical analysis.
+This project looks at how well **Advertisements (Ads)** work compared to **Public Service Announcements (PSAs)** when it comes to getting people to take action (convert). By using **A/B testing** and **Data Analysis**, we want to find out which of the two gets more people engaged and leads to more conversions.
 
 ### 📊 Key Findings
-- **Ads significantly outperform PSAs** in driving conversions.
+- **Ads are much better than PSAs** at getting people to convert.
 - **Statistical results:**
-  - **Absolute Conversion Rate Difference:** 0.60%
-  - **Relative Improvement:** 45.94%
-  - **Z-Statistic:** 6.49 (indicating a strong difference)
-  - **P-Value:** rounded to ~0.0 (high statistical significance)
-- **Conclusion:** Ads are much more effective than PSAs for conversion optimization.
+  - **Difference in Conversion Rate:** 0.60%
+  - **Improvement Percentage:** 45.94%
+  - **Z-Statistic:** 6.49 (this means there’s a strong difference)
+  - **P-Value:** rounded to around 0.0 (showing high significance)
+- **Conclusion:** Ads are way more effective than PSAs for getting conversions.
 
 ---
 ## 🧪 Methodology
-### **1. Data Collection & Preprocessing**
-- Dataset includes user interactions with **Ads and PSAs**.
-- Random sampling ensures equal distribution across groups.
-- Conversion rates are compared between groups.
-- **Outlier Filtering:** The **Interquartile Range (IQR) method** is used to dynamically filter outliers and ensure a more accurate analysis.
-- **Database Connection:** The dataset was **Migrated from kaggle to SQL Server Management Studio (SSMS)** and connected to both **Python and Power BI** for analysis and visualization.
+### **1. Data Collection & Preparation**
+- We collected data on how users interacted with **Ads and PSAs**.
+- We made sure to randomly select users so both groups were equal.
+- We compared the conversion rates of these groups.
+- **Outlier Filtering:** We used the **Interquartile Range (IQR) method** to remove any unusual data points for a more accurate analysis.
+- **Database Connection:** We **migrated the dataset from Kaggle to SQL Server Management Studio (SSMS)** and connected it to **Python and Power BI** for further analysis and visualization.
 
 ### **2. Statistical Analysis**
 - **A/B Testing Approach:** 
-  - A **Z-Test for proportions** was conducted to assess statistical significance.
-  - The p-value determines whether the observed difference is due to chance.
-  
-- **Interpretation of Results:**
-  - A p-value < 0.05 means the difference is **statistically significant**.
-  - A high Z-score confirms the difference is **not due to random chance**.
+  - We used a **Z-Test for proportions** to see if the differences were statistically significant.
+  - The p-value helps us understand if what we’re seeing is just random chance.
+
+- **Interpreting the Results:**
+  - If the p-value is less than 0.05, the difference is considered **statistically significant**.
+  - A high Z-score means the difference is **not just random**.
 
 ---
 ## 📈 Power BI Analysis & DAX Measures
 ### **Power BI Visualizations Include:**
 - **Total Impressions & Conversion Rates by Day/Hour**
-- **User Reach & Engagement Patterns**
-- **Conversion Rate Trends with Confidence Intervals**
-- **Comprehensive Analysis of Campaign and A/B Test**
+- **Patterns in User Reach & Engagement**
+- **Trends in Conversion Rates with Confidence Intervals**
+- **Detailed Analysis of the Campaign and the A/B Test**
 
 ---
 ## 📂 Files Included
 | File Name | Description |
 |-----------|-------------|
-| `marketing_AB.txt` | Link to the Kaggle Dataset |
-| `AB Testing.ipynb` | Jupyter Notebook with statistical analysis & calculations |
-| `dashboard.pbix` | Power BI project file for deeper analysis |
+| `marketing_AB.txt` | Link to the dataset from Kaggle |
+| `AB Testing.ipynb` | Jupyter Notebook with the analysis and calculations |
+| `dashboard.pbix` | Power BI project file for more detailed analysis |
+| `measures.txt` | List of DAX measures used in Power BI |
+| `data description.txt` | Brief description of the dataset columns |
+| `conversion_statistics.csv` | Processed results from the A/B test |
+
+## 🌐 Link to Deployed Dashboard
+[Check out the interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
+
+## 🚀 Conclusion & Recommendations
+- **Ads result in significantly higher conversions** compared to PSAs.
+- **Marketing teams should focus on ads** for better conversion rates.
+- **Future analysis:** Look into whether the timing of ad placements influences conversion rates.
+
+## 🤝 Contributing
+Feel free to reach out on GitHub if you have issues or suggestions!
+
+---
+## 📝 License
+MIT License - You're welcome to use, modify, and share this project however you like.bix` | Power BI project file for deeper analysis |
 | `measures.txt` | List of DAX measures used in Power BI |
 | `data description.txt` | A brief description of the columns in the dataset |
 | `conversion_statistics.csv` | Processed A/B test results from the Jupyter Notebook |
