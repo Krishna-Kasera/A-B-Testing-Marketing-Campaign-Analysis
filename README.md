@@ -15,9 +15,7 @@ This project looks at how well **Advertisements (Ads)** work compared to **Publi
 ---
 ## 🧪 Methodology
 ### **1. Data Collection & Preparation**
-- We collected data on how users interacted with **Ads and PSAs**.
-- We made sure to randomly select users so both groups were equal.
-- We compared the conversion rates of these groups.
+- ** Data Downloading:** We downloaded the data from Kaggle into local device. - [**Link to Dataset**](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing)
 - **Outlier Filtering:** We used the **Interquartile Range (IQR) method** to remove any unusual data points for a more accurate analysis.
 - **Database Connection:** We **migrated the dataset from Kaggle to SQL Server Management Studio (SSMS)** and connected it to **Python and Power BI** for further analysis and visualization.
 
