@@ -1,7 +1,7 @@
 # A/B Testing: Marketing Campaign Analysis
 
 ## 📌 Project Overview
-This project looks at how well **Advertisements (Ads)** work compared to **Public Service Announcements (PSAs)** when it comes to getting people to take action (convert). By using **A/B testing** and **Data Analysis**, we want to find out which of the two gets more people engaged and leads to more conversions.
+This project looks at how well **Advertisements (Ads)** work compared to **Public Service Announcements (PSAs)** when it comes to getting people to take action (convert). By using **A/B testing** and some number crunching, we want to find out which of the two gets more people engaged and leads to more conversions.
 
 ### 📊 Key Findings
 - **Ads are much better than PSAs** at getting people to convert.
@@ -50,24 +50,6 @@ This project looks at how well **Advertisements (Ads)** work compared to **Publi
 | `conversion_statistics.csv` | Processed results from the A/B test |
 
 ## 🌐 Link to Deployed Dashboard
-[Check out the interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
-
-## 🚀 Conclusion & Recommendations
-- **Ads result in significantly higher conversions** compared to PSAs.
-- **Marketing teams should focus on ads** for better conversion rates.
-- **Future analysis:** Look into whether the timing of ad placements influences conversion rates.
-
-## 🤝 Contributing
-Feel free to reach out on GitHub if you have issues or suggestions!
-
----
-## 📝 License
-MIT License - You're welcome to use, modify, and share this project however you like.bix` | Power BI project file for deeper analysis |
-| `measures.txt` | List of DAX measures used in Power BI |
-| `data description.txt` | A brief description of the columns in the dataset |
-| `conversion_statistics.csv` | Processed A/B test results from the Jupyter Notebook |
-
-## 🌐 Link to Deployed Dashboard
 [View the interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
 
 ## 🚀 Conclusion & Recommendations
@@ -81,5 +63,3 @@ Feel free to raise issues or suggest improvements via GitHub!
 ---
 ## 📝 License
 MIT License - You are free to use, modify, and distribute this project.
-
-
