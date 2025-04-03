@@ -6,10 +6,10 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 ### 📊 Key Findings
 - **Ads significantly outperform PSAs** in driving conversions.
 - **Statistical results:**
-  - **Absolute Conversion Rate Difference:** 0.84%
-  - **Relative Improvement:** 47.14%
-  - **Z-Statistic:** 6.21 (indicating a strong difference)
-  - **P-Value:** ~0.0 (high statistical significance)
+  - **Absolute Conversion Rate Difference:** 0.60%
+  - **Relative Improvement:** 45.94%
+  - **Z-Statistic:** 6.49 (indicating a strong difference)
+  - **P-Value:** rounded to ~0.0 (high statistical significance)
 - **Conclusion:** Ads are much more effective than PSAs for conversion optimization.
 
 ---
@@ -19,7 +19,7 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 - Random sampling ensures equal distribution across groups.
 - Conversion rates are compared between groups.
 - **Outlier Filtering:** The **Interquartile Range (IQR) method** is used to dynamically filter outliers and ensure a more accurate analysis.
-- **Database Connection:** The dataset was **migrated from CSV into SQL Server Management Studio (SSMS)** and connected to both **Python and Power BI** for analysis and visualization.
+- **Database Connection:** The dataset was **Migrated from kaggle to SQL Server Management Studio (SSMS)** and connected to both **Python and Power BI** for analysis and visualization.
 
 ### **2. Statistical Analysis**
 - **A/B Testing Approach:** 
@@ -42,12 +42,12 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 ## 📂 Files Included
 | File Name | Description |
 |-----------|-------------|
-| `marketing_AB.csv` | Raw dataset containing A/B test data |
-| `AB Testing.ipynb` | Jupyter Notebook with statistical analysis & calculations|
+| `marketing_AB.txt` | Link to the Kaggle Dataset |
+| `AB Testing.ipynb` | Jupyter Notebook with statistical analysis & calculations |
 | `dashboard.pbix` | Power BI project file for deeper analysis |
 | `measures.txt` | List of DAX measures used in Power BI |
-| `description.txt` | A brief description of the project and dataset |
-| `output.csv` | Processed A/B test results from the Jupyter Notebook |
+| `data description.txt` | A brief description of the columns in the dataset |
+| `conversion_statistics.csv` | Processed A/B test results from the Jupyter Notebook |
 
 ## 🌐 Link to Deployed Dashboard
 [View the interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
@@ -55,7 +55,7 @@ This project analyzes the effectiveness of **Advertisements (Ads) vs. Public Ser
 ## 🚀 Conclusion & Recommendations
 - **Ads drive significantly higher conversions** than PSAs.
 - **Marketing teams should prioritize ads** for conversion optimization.
-- **Further analysis:** Experiment with different ad formats & targeting strategies.
+- **Further analysis:** Whether timing when the most ads were shown affect conversion.
 
 ## 🤝 Contributing
 Feel free to raise issues or suggest improvements via GitHub!
