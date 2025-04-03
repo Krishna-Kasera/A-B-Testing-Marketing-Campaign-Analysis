@@ -40,7 +40,7 @@ This project looks at how well **Advertisements (Ads)** work compared to **Publi
 ## 📂 Files Included
 | File Name | Description |
 |-----------|-------------|
-| `marketing_AB.txt` | Link to the dataset from Kaggle |
+| `marketing_AB.csv` | Dataset used in the analysis |
 | `AB Testing.ipynb` | Jupyter Notebook with the analysis and calculations |
 | `dashboard.pbix` | Power BI project file for more detailed analysis |
 | `measures.txt` | List of DAX measures used in Power BI |
@@ -48,7 +48,7 @@ This project looks at how well **Advertisements (Ads)** work compared to **Publi
 | `conversion_statistics.csv` | Processed results from the A/B test |
 
 ## 🌐 Link to Deployed Dashboard
-[View the interactive Power BI Dashboard](https://app.powerbi.com/reportEmbed?reportId=ae681465-0b11-445b-8fc9-b5bb2fcb9a77&autoAuth=true&ctid=d8d6e7dc-2b15-43c5-81fd-2efc145c9d2c)
+[View the interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiODZhNGY2ZTktYjM2Zi00MWI1LTg1YTEtYmRiODE1NjAyMzQ3IiwidCI6ImQ4ZDZlN2RjLTJiMTUtNDNjNS04MWZkLTJlZmMxNDVjOWQyYyJ9&pageName=983255420cd106400571)
 
 ## 🚀 Conclusion & Recommendations
 - **Ads drive significantly higher conversions** than PSAs.
